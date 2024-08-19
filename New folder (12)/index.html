@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <!--
+// v0 by Vercel.
+// https://v0.dev/t/velldB61TDh
+-->
+  <style>
+    body {
+      background-color: bisque;
+      padding: 12%;
+    }
+    .main_text1 {
+      padding: 12%;
+    }
+    </style>
+    <style > 
+        :root {
+      --background: 36 39% 88%;
+      --foreground: 36 45% 15%;
+      --primary: 36 45% 70%;
+      --primary-foreground: 36 45% 11%;
+      --secondary: 40 35% 77%;
+      --secondary-foreground: 36 45% 25%;
+      --accent: 36 64% 57%;
+      --accent-foreground: 36 72% 17%;
+      --destructive: 0 84% 37%;
+      --destructive-foreground: 0 0% 98%;
+      --muted: 36 33% 75%;
+      --muted-foreground: 36 45% 25%;
+      --card: 36 46% 82%;
+      --card-foreground: 36 45% 20%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 240 10% 3.9%;
+      --border: 36 45% 60%;
+      --input: 36 45% 60%;
+      --ring: 36 45% 30%;
+      --chart-1: 25 34% 28%;
+      --chart-2: 26 36% 34%;
+      --chart-3: 28 40% 40%;
+      --chart-4: 31 41% 48%;
+      --chart-5: 35 43% 53%;
+      --radius: 0rem;
+    }
+  </style>
+  <style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "DM Sans", sans-serif;
+      --font-sans-serif: "DM Sans";
+    }
+  </style>
+  <style>
+    body {
+      font-family: "Space Mono", monospace;
+      --font-monospace: "Space Mono";
+    }
+  </style>
+  <body>
+    <div class="flex flex-col min-h-dvh">
+      <section
+        class="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-primary to-primary/80"
+      >
+        <div class="container grid gap-6 px-4 md:px-6">
+          <div
+            class="flex flex-col items-center justify-center text-center space-y-4"
+          >
+            <h1
+              class="text-3xl font-bold tracking-tighter text-primary-foreground sm:text-4xl md:text-5xl"
+            >
+              Discover the Best Fast Food Near You
+            </h1>
+            <p
+              class="max-w-[700px] text-primary-foreground/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+            >
+              Find your favorite fast food restaurants, browse menus, and order
+              with ease.
+            </p>
+            <form class="w-full max-w-md">
+              <div class="relative">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="absolute left-2.5 top-2.5 h-4 w-4 text-primary-foreground/80"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.3-4.3"></path>
+                </svg>
+                <input
+                  class="flex h-10 border border-input px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 w-full rounded-md bg-primary-foreground/10 pl-8 text-primary-foreground placeholder:text-primary-foreground/60"
+                  type="search"
+                  placeholder="Search for restaurants, cuisines, and more"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="main_text1">
+        <div class="container grid gap-6 px-4 md:px-6">
+          <div
+            class="flex flex-col items-center justify-center text-center space-y-4"
+          >
+            <div
+              class="inline-block rounded-lg bg-muted px-3 py-1 text-sm text-muted-foreground"
+            >
+              Featured Restaurants
+            </div>
+            <h2
+              class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
+            >
+              Explore the Best Fast Food Options
+            </h2>
+            <p
+              class="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+            >
+              Browse our selection of top-rated fast food restaurants and
+              discover your new favorite spot.
+            </p>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden"
+              data-v0-t="card"
+            >
+              <div class="text1">
+                <img
+                  src="img/photo_2024-08-17_14-32-08.jpg"
+                  alt="Restaurant Image"
+                  width="400"
+                  height="225"
+                  class="object-cover aspect-video"
+                />
+              </div>
+              <div class="flex items-center p-4">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h3 class="font-semibold">McDonald's</h3>
+                    <p class="text-sm text-muted-foreground">
+                      American, Burgers
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-1 text-yellow-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-4 w-4"
+                    >
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                      ></polygon>
+                    </svg>
+                    <span class="text-sm font-medium">4.7</span>
+                  </div>
+                </div>
+                <div class="mt-2">
+                  <button
+                    class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full"
+                  >
+                    Shop Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden"
+              data-v0-t="card"
+            >
+              <div class="p-0">
+                <img
+                  src="img/photo_2024-08-17_14-32-09.jpg"
+                  alt="Restaurant Image"
+                  width="400"
+                  height="225"
+                  class="object-cover aspect-video"
+                />
+              </div>
+              <div class="flex items-center p-4">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h3 class="font-semibold">Taco Bell</h3>
+                    <p class="text-sm text-muted-foreground">
+                      Mexican, Fast Food
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-1 text-yellow-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-4 w-4"
+                    >
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                      ></polygon>
+                    </svg>
+                    <span class="text-sm font-medium">4.5</span>
+                  </div>
+                </div>
+                <div class="mt-2">
+                  <button
+                    class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full"
+                  >
+                    Shop Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden"
+              data-v0-t="card"
+            >
+              <div class="p-0">
+                <img
+                  src="img/photo_2024-08-17_14-32-09.jpg"
+                  alt="Restaurant Image"
+                  width="400"
+                  height="225"
+                  class="object-cover aspect-video"
+                />
+              </div>
+              <div class="flex items-center p-4">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h3 class="font-semibold">Subway</h3>
+                    <p class="text-sm text-muted-foreground">
+                      Sandwiches, Salads
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-1 text-yellow-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-4 w-4"
+                    >
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                      ></polygon>
+                    </svg>
+                    <span class="text-sm font-medium">4.3</span>
+                  </div>
+                </div>
+                <div class="mt-2">
+                  <button
+                    class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full"
+                  >
+                    Shop Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden"
+              data-v0-t="card"
+            >
+              <div class="p-0">
+                <img
+                  src="img/photo_2024-08-17_14-32-08.jpg"
+                  alt="Restaurant Image"
+                  width="400"
+                  height="225"
+                  class="object-cover aspect-video"
+                />
+              </div>
+              <div class="flex items-center p-4">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h3 class="font-semibold">Burger King</h3>
+                    <p class="text-sm text-muted-foreground">
+                      Burgers, Fast Food
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-1 text-yellow-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-4 w-4"
+                    >
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                      ></polygon>
+                    </svg>
+                    <span class="text-sm font-medium">4.2</span>
+                  </div>
+                </div>
+                <div class="mt-2">
+                  <button
+                    class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3 w-full"
+                  >
+                    Shop Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="w-full py-12 md:py-24 lg:py-32 bg-muted">
+        <div class="container grid gap-6 px-4 md:px-6">
+          <div
+            class="flex flex-col items-center justify-center text-center space-y-4"
+          >
+            <div
+              class="inline-block rounded-lg bg-muted px-3 py-1 text-sm text-muted-foreground"
+            >
+              Browse by Cuisine
+            </div>
+            <h2
+              class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
+            >
+              Find Your Favorite Cuisine
+            </h2>
+            <p
+              class="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+            >
+              Explore a variety of cuisines and find the perfect fast food
+              option for your taste buds.
+            </p>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a
+              class="group flex h-24 items-center justify-center rounded-lg bg-background transition-colors hover:bg-accent hover:text-accent-foreground"
+              href="#"
+            >
+              <div class="grid gap-1 text-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-6 w-6 mx-auto text-muted-foreground group-hover:text-accent-foreground"
+                >
+                  <circle cx="12.5" cy="8.5" r="2.5"></circle>
+                  <path
+                    d="M12.5 2a6.5 6.5 0 0 0-6.22 4.6c-1.1 3.13-.78 3.9-3.18 6.08A3 3 0 0 0 5 18c4 0 8.4-1.8 11.4-4.3A6.5 6.5 0 0 0 12.5 2Z"
+                  ></path>
+                  <path
+                    d="m18.5 6 2.19 4.5a6.48 6.48 0 0 1 .31 2 6.49 6.49 0 0 1-2.6 5.2C15.4 20.2 11 22 7 22a3 3 0 0 1-2.68-1.66L2.4 16.5"
+                  ></path>
+                </svg>
+                <span class="text-sm font-medium">Burgers</span>
+              </div>
+            </a>
+            <a
+              class="group flex h-24 items-center justify-center rounded-lg bg-background transition-colors hover:bg-accent hover:text-accent-foreground"
+              href="#"
+            >
+              <div class="grid gap-1 text-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-6 w-6 mx-auto text-muted-foreground group-hover:text-accent-foreground"
+                >
+                  <path
+                    d="m12 10 2 4v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3a8 8 0 1 0-16 0v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3l2-4h4Z"
+                  ></path>
+                  <path d="M4.82 7.9 8 10"></path>
+                  <path d="M15.18 7.9 12 10"></path>
+                  <path d="M16.93 10H20a2 2 0 0 1 0 4H2"></path>
+                </svg>
+                <span class="text-sm font-medium">Mexican</span>
+              </div>
+            </a>
+            <a
+              class="group flex h-24 items-center justify-center rounded-lg bg-background transition-colors hover:bg-accent hover:text-accent-foreground"
+              href="#"
+            >
+              <div class="grid gap-1 text-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-6 w-6 mx-auto text-muted-foreground group-hover:text-accent-foreground"
+                >
+                  <path d="M15 11h.01"></path>
+                  <path d="M11 15h.01"></path>
+                  <path d="M16 16h.01"></path>
+                  <path d="m2 16 20 6-6-20A20 20 0 0 0 2 16"></path>
+                  <path d="M5.71 17.11a17.04 17.04 0 0 1 11.4-11.4"></path>
+                </svg>
+                <span class="text-sm font-medium">Pizza</span>
+              </div>
+            </a>
+            <a
+              class="group flex h-24 items-center justify-center rounded-lg bg-background transition-colors hover:bg-accent hover:text-accent-foreground"
+              href="#"
+            >
+              <div class="grid gap-1 text-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-6 w-6 mx-auto text-muted-foreground group-hover:text-accent-foreground"
+                >
+                  <path d="M3 11v3a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-3"></path>
+                  <path
+                    d="M12 19H4a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-3.83"
+                  ></path>
+                  <path d="m3 11 7.77-6.04a2 2 0 0 1 2.46 0L21 11H3Z"></path>
+                  <path
+                    d="M12.97 19.77 7 15h12.5l-3.75 4.5a2 2 0 0 1-2.78.27Z"
+                  ></path>
+                </svg>
+                <span class="text-sm font-medium">Sandwiches</span>
+              </div>
+            </a>
+            <a
+              class="group flex h-24 items-center justify-center rounded-lg bg-background transition-colors hover:bg-accent hover:text-accent-foreground"
+              href="#"
+            >
+              <div class="grid gap-1 text-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-6 w-6 mx-auto text-muted-foreground group-hover:text-accent-foreground"
+                >
+                  <path d="M7 21h10"></path>
+                  <path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z"></path>
+                  <path
+                    d="M11.38 12a2.4 2.4 0 0 1-.4-4.77 2.4 2.4 0 0 1 3.2-2.77 2.4 2.4 0 0 1 3.47-.63 2.4 2.4 0 0 1 3.37 3.37 2.4 2.4 0 0 1-1.1 3.7 2.51 2.51 0 0 1 .03 1.1"
+                  ></path>
+                  <path d="m13 12 4-4"></path>
+                  <path
+                    d="M10.9 7.25A3.99 3.99 0 0 0 4 10c0 .73.2 1.41.54 2"
+                  ></path>
+                </svg>
+                <span class="text-sm font-medium">Salads</span>
+              </div>
+            </a>
+            <a
+              class="group flex h-24 items-center justify-center rounded-lg bg-background transition-colors hover:bg-accent hover:text-accent-foreground"
+              href="#"
+            >
+              <div class="grid gap-1 text-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-6 w-6 mx-auto text-muted-foreground group-hover:text-accent-foreground"
+                >
+                  <path d="M16 7h.01"></path>
+                  <path
+                    d="M3.4 18H12a8 8 0 0 0 8-8V7a4 4 0 0 0-7.28-2.3L2 20"
+                  ></path>
+                  <path d="m20 7 2 .5-2 .5"></path>
+                  <path d="M10 18v3"></path>
+                  <path d="M14 17.75V21"></path>
+                  <path d="M7 18a6 6 0 0 0 3.84-10.61"></path>
+                </svg>
+                <span class="text-sm font-medium">Chicken</span>
+              </div>
+            </a>
+            <a
+              class="group flex h-24 items-center justify-center rounded-lg bg-background transition-colors hover:bg-accent hover:text-accent-foreground"
+              href="#"
+            >
+              <div class="grid gap-1 text-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-6 w-6 mx-auto text-muted-foreground group-hover:text-accent-foreground"
+                >
+                  <path
+                    d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"
+                  ></path>
+                  <path d="M18 12v.5"></path>
+                  <path d="M16 17.93a9.77 9.77 0 0 1 0-11.86"></path>
+                  <path
+                    d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33"
+                  ></path>
+                  <path
+                    d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4"
+                  ></path>
+                  <path
+                    d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98"
+                  ></path>
+                </svg>
+                <span class="text-sm font-medium">Sushi</span>
+              </div>
+            </a>
+            <a
+              class="group flex h-24 items-center justify-center rounded-lg bg-background transition-colors hover:bg-accent hover:text-accent-foreground"
+              href="#"
+            >
+              <div class="grid gap-1 text-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-6 w-6 mx-auto text-muted-foreground group-hover:text-accent-foreground"
+                >
+                  <path
+                    d="M2 2a26.6 26.6 0 0 1 10 20c.9-6.82 1.5-9.5 4-14"
+                  ></path>
+                  <path d="M16 8c4 0 6-2 6-6-4 0-6 2-6 6"></path>
+                  <path d="M17.41 3.6a10 10 0 1 0 3 3"></path>
+                </svg>
+                <span class="text-sm font-medium">Vegan</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
